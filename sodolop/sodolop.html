@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body>
+	<h1>Sơ Đồ lớp</h1><span style="font-size: 20px;color: red;font-weight: bold;">Vì lớp quá nhiều người nên chỉ làm dãy bên trái</span>
+	<section id="album-view">
+		
+				</section>
+				<section id="modal-view" class="hidden">
+		
+				</section>
+
+
+
+	<div class="top">
+	<p>Bàn giáo viên</p>
+	</div>
+	<div class="main">
+		<div id="left">
+
+			<div class="sodolop">
+				
+				<div class="ban_to1" ><span id="hihi1" onclick="hello(1)">Hà Nguyên Anh</span></div>
+				<div class="ban_to1" id="hihi2" onclick="hello(2)">Vũ Minh Lâm</div>
+				<div class="ban_to1" id="hihi3"onclick="hello(3)">Bùi Chiến Thắng</div>
+				<div class="ban_to1" id="hihi4" onclick="hello(4)">Nguyễn Minh Tùng</div>
+				<div class="ban_to1" id="hihi5"onclick="hello(5)">Trần Tiến Vũ</div>
+				<div class="ban_to1" id="hihi6"onclick="hello(6)">Lê Hữu Tiến</div>
+				<div class="ban_to1" id="hihi7"onclick="hello(7)">Phạm Việt Tùng</div>
+				<div class="ban_to1" id="hihi8"onclick="hello(8)">Nguyễn Thành Dự</div>
+				<div class="ban_to1" id="hihi9" onclick="hello(9)">Nguyễn Tiến Tiệp</div>
+				<div class="ban_to1" id="hihi10" onclick="hello(10)">Đình Mạnh Đạt</div>
+				<div class="ban_to1" id="hihi11" onclick="hello(11)">Nguyễn Phú Huy</div>
+				<div class="ban_to1" id="hihi12"  onclick="hello(12)">Trần Đình Nam</div>
+				<div class="ban_to1" id="hihi13"  onclick="hello(13)">Đặng Xuân Phong</div>
+				<div class="ban_to1" id="hihi14"  onclick="hello(14)">Dương Minh Tiến</div>
+				<div class="ban_to1" id="hihi15"  onclick="hello(15)">Nguyễn Ngọc Tú</div>
+				<div class="ban_to1" id="hihi16"  onclick="hello(16)">Phan Huy Anh</div>
+				<div class="ban_to1" id="hihi17"  onclick="hello(17)">Ngô Bảo Khôi</div>
+				
+			</div>
+				 
+
+	    </div>
+	    <div id="content">
+	    	<div class="sodolop">
+	    		
+				
+				<div class="ban_to2">A</div>
+				<div class="ban_to2">B</div>
+				<div class="ban_to2">C</div>
+				<div class="ban_to2">D</div>
+				<div class="ban_to2">E</div>
+				<div class="ban_to2">F</div>
+				<div class="ban_to2">G</div>
+				<div class="ban_to2">H</div>
+				<div class="ban_to2">I</div>
+				<div class="ban_to2">J</div>
+				<div class="ban_to2">K</div>
+				<div class="ban_to2">L</div>
+				<div class="ban_to2">M</div>
+				<div class="ban_to2">N</div>
+				<div class="ban_to2">O</div>
+				<div class="ban_to2">P</div>
+				<div class="ban_to2">Q</div>
+				<div class="ban_to2">R</div>
+				<div class="ban_to2">S</div>
+				<div class="ban_to2">T</div>
+				
+
+	    	</div>
+				
+	    </div>
+	    <div id="right">
+	    	<div class="sodolop">
+	    		<div class="ban_to3">U</div>
+	    		<div class="ban_to3">V</div>
+	    		<div class="ban_to3">W</div>
+	    		<div class="ban_to3">X</div>
+	    		<div class="ban_to3">Y</div>
+	    		<div class="ban_to3">Z</div>
+				
+
+	    	</div>	
+	    	
+	    	</div>
+		</div>	
+	<!-- script -->
+	<script src="jquery-3.4.1.min.js"> </script>
+	<script type="text/javascript">
+	
+	
+
+			function hello(id){
+				
+				
+				var fruit=['Hà Nguyên Anh','Vũ Minh Lâm','Bùi Chiến Thắng','Nguyễn Minh Tùng','Trần Tiến Vũ','Lê Hữu Tiến','Phạm Việt Tùng','Nguyễn Thành Dự','Nguyễn Tiến Tiệp','Đình Mạnh Đạt','Nguyễn Phú Huy','Trần Đình Nam','Đặng Xuân Phong','Dương Minh Tiến','Nguyễn Ngọc Tú','Phan Huy Anh','Ngô Bảo Khôi'];
+				for (let i = 0; i < fruit.length; i++) {
+					if ($('#hihi'+id).html()==fruit[i]) {
+					$('#album-view').append('<img id="huy" src="image/'+fruit[i]+'.jpg"/>');
+					break;
+					}
+				}
+				
+				$('img').each(function(index){
+					$(this).click(function(){
+							$('#modal-view').append('<img src="'+$(this).attr('src')+'"/>').removeClass('hidden').html();
+							$('#album-view').html('');
+							
+							
+					});
+				});	
+				$('#modal-view').click(function(){
+					$(this).addClass('hidden');
+					$(this).html('')
+				});
+
+			};
+		
+			
+			
+	
+	</script>
+	<!-- <script type="text/javascript" src="photo-list.js"></script>
+	<script type="text/javascript" src="finish.js"></script> -->
+
+</body>
+</html>
